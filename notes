@@ -1,0 +1,5 @@
+docker build -t dinopark-content-nginx . 
+docker run -it --rm -d -p 8080:80 --name dinopark-nginx dinopark-content-nginx
+docker login     
+docker tag dinopark-content-nginx kvkirthy/dinopark-content-nginx
+docker push kvkirthy/dinopark-content-nginx 
