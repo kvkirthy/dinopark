@@ -1,0 +1,26 @@
+<div>
+    <span *ngFor="let dino of dinoList" (click)="selectDino(dino)">
+        <img class="icon" [src]="dino.imagePath" [alt]="dino.name">
+    </span>
+
+    <div *ngIf="dinoImage">
+        <mat-card class="card mat-elevation-z0">
+            <mat-card-header>
+              <!-- <div mat-card-avatar class="example-header-image"></div> -->
+              <mat-card-title>{{title}}</mat-card-title>
+              <mat-card-subtitle>Pronounce as {{pronunciation}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image class="card-image" [src]="dinoImage" alt="">
+            <mat-card-content>
+                <p>
+                    Loves to eat {{dinoDiet}}
+                    Is {{dinoLength}} long.
+                    Was seen in {{dinoPeriod}} Period
+                    {{mya}}
+                    {{info}}
+                </p>
+            </mat-card-content>
+          </mat-card>
+    </div>
+    
+</div>

@@ -1,0 +1,9 @@
+{
+    "/api/dinos": {
+      "target": "https://dinopark-api.azurewebsites.net",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    },
+    "logLevel": "debug"
+  }

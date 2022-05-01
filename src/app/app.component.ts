@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DinoAccessService } from './dino-access.service';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +7,10 @@ import { DinoAccessService } from './dino-access.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private dinoClient: DinoAccessService){
+  constructor(){
   }
 
   ngOnInit(){
-    this.dinoClient
-      .getDinosaurs()
-      .subscribe( r => console.table(r) );
+  
   }
 }
